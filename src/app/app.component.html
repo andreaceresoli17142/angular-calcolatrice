@@ -1,0 +1,22 @@
+<ng-container *ngIf="tipoCalcolatrice === undefined">
+  <br>
+  <br>
+  <div class="center">
+    scegli tipo di calcolatrice
+    <br>
+    <button type="button" class="btn btn-primary" (click)="setSemplice()"> semplice </button>
+    &nbsp;&nbsp;
+    <button type="button" class="btn btn-primary" (click)="setScientifica()"> scientifica </button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="tipoCalcolatrice === 0">
+  <app-calcolatrice-semplice></app-calcolatrice-semplice>
+  <button type="button" class="btn btn-primary" (click)="backToMenu()"> home </button>
+</ng-container>
+
+
+<ng-container *ngIf="tipoCalcolatrice === 1">
+  <app-calcolatrice-scientifica></app-calcolatrice-scientifica>
+  <button type="button" class="btn btn-primary" (click)="backToMenu()"> home </button>
+</ng-container>

@@ -1,0 +1,70 @@
+.warning {
+  color: red;
+}
+
+.display {
+  width: 287px;
+}
+
+table {
+  table-layout: fixed;
+}
+
+.tableButton {
+  width: 100%;
+  height: 100%;
+}
+
+button:hover {
+  background-color: lightskyblue;
+}
+
+#leftbox {
+  float:left;
+  width:33%;
+  height:280px;
+}
+#middlebox{
+  float:left;
+  width:34%;
+  height:280px;
+}
+#rightbox{
+  float:right;
+  width:33%;
+  height:280px;
+}
+
+
+.div-table {
+  display: table;
+  width: auto;
+  height: auto;
+
+  border-collapse:collapse;
+  border:1px solid grey;
+
+}
+.div-table-row {
+  display: table-row;
+  display: flex;
+  width: auto;
+  height: auto;
+  border:1px solid grey;
+  background-color: lightskyblue;
+}
+.div-table-col {
+  display: table-cell;
+  flex: 1;
+  width: auto;
+  height: auto;
+  padding: 1em;
+  border: solid;
+
+}
+
+.row > div:hover
+{
+  background-image: none;
+  background-color: lightskyblue !important;
+}

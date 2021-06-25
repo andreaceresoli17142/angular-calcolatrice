@@ -1,0 +1,81 @@
+<div class="calcolatriceSemplice">
+
+	<div id="leftbox"></div>
+
+	<div id="middlebox">
+		<br>
+		<br>
+		<div class="container">
+			<p>calcolatrice semplice</p>
+			<div class="mb-3">
+				<input type="text" class="form-control" class="display" id="calcolatriceOutput"
+					value="{{numbersToCalculate}}" (keydown)="keyBoardInput($event)" autofocus readonly >
+			</div>
+			<div class="row">
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(7)"> 7 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(8)"> 8 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(9)"> 9 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputOperatorCalcolatrice(operatorEnum.division)"> / </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputPunctuation('(')"> ( </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputPunctuation('-')"> - </div>
+			</div>
+			<div class="row">
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(4)"> 4 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(5)"> 5 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(6)"> 6 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputOperatorCalcolatrice(operatorEnum.multiplication)"> * </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputPunctuation(')')"> ) </div>
+			</div>
+			<div class="row">
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(1)"> 1 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(2)"> 2 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(3)"> 3 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputOperatorCalcolatrice(operatorEnum.subtraction)"> – </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputPunctuation('.')"> . </div>
+			</div>
+			<div class="row">
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputNumberCalcolatrice(0)"> 0 </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="inputOperatorCalcolatrice(operatorEnum.sum)"> + </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="sumbit()"> = </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="deleteNumber()"> C </div>
+				<div type="div" class="text-center hover rounded border border-primary p-2 m-1 col-1 bg-light text-dark"
+					(click)="cancelAll()"> CA </div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="warning">{{ warningString }}</div>
+
+	</div>
+
+	<div id="rightbox">
+		<br>
+		cronologia
+		<br>
+		<textarea name="history" id="history" cols="40" rows="20" style="resize:none" readonly>{{ history }}</textarea>
+		<br>
+		<button type="button" class="btn btn-light" (click)="deleteHistory()"> deleteHistory </button>
+	</div>
+
+</div>
